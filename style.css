@@ -6,15 +6,20 @@
 
 body {
     font-family: 'Courier New', monospace;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e);
+    background: linear-gradient(180deg, #0a0a0a, #1a1a2e, #16213e);
     color: #00ffff;
     overflow: hidden;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .game-container {
-    width: 100vw;
+    width: 600px;
+    max-width: 90vw;
     height: 100vh;
+    min-height: 800px;
+    margin: 0 auto;
     border: 3px solid #00ffff;
     background: rgba(0, 20, 40, 0.9);
     position: relative;
@@ -79,28 +84,29 @@ body {
 /* Gate Cloud */
 .gate-cloud {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
     text-align: center;
+    z-index: 10;
 }
 
 .cloud-title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color: #00ffff;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-shadow: 0 0 10px #00ffff;
 }
 
 .cloud-visual {
     position: relative;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background: radial-gradient(circle, rgba(0, 255, 255, 0.3), rgba(0, 255, 255, 0.1), transparent);
-    border-radius: 50px;
+    border-radius: 25px;
     border: 2px solid rgba(0, 255, 255, 0.5);
 }
 
@@ -128,11 +134,11 @@ body {
 /* Central Deflector */
 .central-deflector {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
 }
 
 .deflector-core {
@@ -218,11 +224,11 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 20px;
+    padding: 15px;
     background: rgba(0, 30, 60, 0.8);
     border-top: 2px solid #00ffff;
 }
@@ -231,12 +237,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    width: 200px;
+    gap: 8px;
+    width: 120px;
 }
 
 .control-label {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     color: #00ffff;
 }
@@ -244,21 +250,21 @@ body {
 /* EM Emitters */
 .em-emitter {
     position: relative;
-    width: 100px;
-    height: 120px;
+    width: 80px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .emitter-body {
     position: relative;
-    width: 60px;
-    height: 80px;
+    width: 50px;
+    height: 60px;
     background: linear-gradient(45deg, rgba(0, 255, 255, 0.8), rgba(0, 200, 200, 0.8));
     border: 2px solid #00ffff;
-    border-radius: 10px 10px 5px 5px;
+    border-radius: 8px 8px 4px 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,12 +274,12 @@ body {
 }
 
 .emitter-tip {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: radial-gradient(circle, #ffff00, #ff8800);
     border: 2px solid #ffaa00;
     border-radius: 50%;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
@@ -282,8 +288,8 @@ body {
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 4px;
-    height: 100px;
+    width: 3px;
+    height: 80px;
     background: linear-gradient(to top, rgba(255, 255, 0, 0.8), transparent);
     border-radius: 2px;
     opacity: 0;
@@ -313,8 +319,8 @@ body {
 }
 
 .angle-slider {
-    width: 100px;
-    height: 5px;
+    width: 80px;
+    height: 4px;
     background: #333;
     border: 1px solid #00ffff;
     border-radius: 3px;
@@ -324,8 +330,8 @@ body {
 
 .angle-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     background: #00ffff;
     border: 1px solid #fff;
     border-radius: 50%;
@@ -333,7 +339,7 @@ body {
 }
 
 .angle-display {
-    font-size: 10px;
+    font-size: 9px;
     color: #00ffff;
 }
 
@@ -342,41 +348,41 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    gap: 40px;
-    width: 400px;
+    gap: 25px;
+    width: 300px;
 }
 
 /* Qubits */
 .qubit-container {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .qubit {
-    width: 80px;
-    height: 120px;
+    width: 60px;
+    height: 100px;
     background: rgba(0, 255, 255, 0.2);
     border: 2px solid #00ffff;
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 8px;
     position: relative;
 }
 
 .qubit-label {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     color: #00ffff;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .qubit-state {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: #00ff00;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .qubit-gates {
@@ -390,22 +396,22 @@ body {
 
 .gate-in-qubit {
     width: 100%;
-    height: 20px;
+    height: 16px;
     background: rgba(0, 255, 255, 0.8);
     border: 1px solid #00ffff;
     border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     color: #000;
 }
 
 /* Dustbin */
 .dustbin {
-    width: 60px;
-    height: 120px;
+    width: 45px;
+    height: 100px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -413,31 +419,31 @@ body {
 }
 
 .dustbin-lid {
-    width: 50px;
-    height: 10px;
+    width: 40px;
+    height: 8px;
     background: #666;
     border: 2px solid #888;
-    border-radius: 5px 5px 0 0;
+    border-radius: 4px 4px 0 0;
     margin-bottom: 2px;
 }
 
 .dustbin-body {
-    width: 45px;
-    height: 80px;
+    width: 35px;
+    height: 65px;
     background: linear-gradient(to bottom, #555, #333);
     border: 2px solid #888;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 8px 8px;
     position: relative;
 }
 
 .dustbin-label {
-    font-size: 8px;
+    font-size: 7px;
     color: #888;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 .dustbin-count {
-    font-size: 10px;
+    font-size: 9px;
     color: #ffff00;
     font-weight: bold;
     position: absolute;
@@ -449,40 +455,41 @@ body {
 /* Game Status */
 .game-status {
     position: absolute;
-    top: 150px;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 8px 15px;
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid #00ffff;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 12px;
     color: #00ff00;
     text-align: center;
     z-index: 1000;
+    max-width: 80%;
 }
 
 /* Game Controls */
 .game-controls {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     z-index: 1000;
 }
 
 .start-button, .pause-button, .reset-button {
-    padding: 10px 15px;
+    padding: 8px 12px;
     background: rgba(0, 255, 0, 0.8);
     color: #000;
     border: 2px solid #00ff00;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-family: inherit;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
     transition: all 0.3s ease;
 }
 
@@ -508,22 +515,52 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .game-container {
+        width: 95vw;
+        min-height: 100vh;
+    }
+    
     .control-panel {
-        height: 150px;
+        height: 200px;
         padding: 10px;
     }
     
     .center-area {
-        width: 300px;
-        gap: 20px;
+        width: 250px;
+        gap: 15px;
     }
     
     .user-control {
-        width: 150px;
+        width: 100px;
     }
     
     .game-controls {
         right: 10px;
         top: 10px;
+    }
+    
+    .gate-cloud {
+        width: 200px;
+        height: 70px;
+    }
+    
+    .cloud-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 600px) {
+    .game-container {
+        min-height: 600px;
+    }
+    
+    .control-panel {
+        height: 180px;
+    }
+    
+    .central-deflector {
+        top: 35%;
+        width: 100px;
+        height: 100px;
     }
 }
