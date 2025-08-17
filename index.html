@@ -29,30 +29,87 @@
                 </div>
             </div>
 
-            <!-- Central Deflector -->
-            <div class="central-deflector" id="centralDeflector">
-                <div class="deflector-core">
-                    <div class="deflector-ring"></div>
-                    <div class="deflector-ring"></div>
-                    <div class="deflector-center">EM FIELD</div>
+            <!-- Quantum Deflector Blocks -->
+            <div class="quantum-blocks">
+                <!-- Hadamard Blocks (Diamond shaped) -->
+                <div class="quantum-block hadamard-block" style="top: 200px; left: 150px;" data-type="H">
+                    <div class="block-core">H</div>
+                    <div class="block-effect"></div>
+                </div>
+                <div class="quantum-block hadamard-block" style="top: 300px; right: 150px;" data-type="H">
+                    <div class="block-core">H</div>
+                    <div class="block-effect"></div>
+                </div>
+                
+                <!-- Pauli Blocks (Triangular) -->
+                <div class="quantum-block pauli-block" style="top: 250px; left: 100px;" data-type="X">
+                    <div class="block-core">X</div>
+                    <div class="block-effect"></div>
+                </div>
+                <div class="quantum-block pauli-block" style="top: 350px; right: 100px;" data-type="Z">
+                    <div class="block-core">Z</div>
+                    <div class="block-effect"></div>
+                </div>
+                
+                <!-- Phase Blocks (Circular) -->
+                <div class="quantum-block phase-block" style="top: 180px; left: 50%; transform: translateX(-50%);" data-type="P">
+                    <div class="block-core">φ</div>
+                    <div class="block-effect"></div>
+                </div>
+                <div class="quantum-block phase-block" style="top: 280px; left: 80px;" data-type="P">
+                    <div class="block-core">φ</div>
+                    <div class="block-effect"></div>
+                </div>
+                <div class="quantum-block phase-block" style="top: 320px; right: 80px;" data-type="P">
+                    <div class="block-core">φ</div>
+                    <div class="block-effect"></div>
+                </div>
+                
+                <!-- Entanglement Blocks (Double connected) -->
+                <div class="quantum-block entangle-block" style="top: 220px; left: 200px;" data-type="CNOT">
+                    <div class="block-core">⊕</div>
+                    <div class="entangle-connection"></div>
+                    <div class="block-effect"></div>
+                </div>
+                
+                <!-- Measurement Blocks (Hexagonal) -->
+                <div class="quantum-block measure-block" style="top: 270px; right: 200px;" data-type="M">
+                    <div class="block-core">M</div>
+                    <div class="block-effect"></div>
                 </div>
             </div>
 
-            <!-- Game Status -->
-            <div class="game-status" id="gameStatus">Ready to start!</div>
+            <!-- Pinball-style Side Walls -->
+            <div class="side-walls">
+                <div class="wall left-wall"></div>
+                <div class="wall right-wall"></div>
+            </div>
+            
+            <!-- Score and Combo Display -->
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="score-label">SCORE:</span>
+                    <span class="score-value" id="scoreValue">0</span>
+                </div>
+                <div class="combo-item">
+                    <span class="combo-label">COMBO:</span>
+                    <span class="combo-value" id="comboValue">0x</span>
+                </div>
+            </div>
 
             <!-- Control Panel at bottom -->
             <div class="control-panel">
                 <!-- User Control 1 (Left) -->
                 <div class="user-control left-control">
                     <div class="control-label">USER CONTROL 1</div>
-                    <div class="em-emitter" id="emitter1">
-                        <div class="emitter-body">
-                            <div class="emitter-beam" id="beam1"></div>
-                            <div class="emitter-tip"></div>
+                    <div class="em-emitter flipper-left" id="emitter1">
+                        <div class="emitter-body flipper-body">
+                            <div class="emitter-beam flipper-beam" id="beam1"></div>
+                            <div class="emitter-tip flipper-tip"></div>
                         </div>
                         <div class="angle-control">
-                            <input type="range" min="-45" max="45" value="0" class="angle-slider" id="angleSlider1">
+                            <span class="flipper-key">A KEY</span>
+                            <input type="range" min="-60" max="60" value="0" class="angle-slider" id="angleSlider1">
                             <div class="angle-display" id="angleDisplay1">0°</div>
                         </div>
                     </div>
@@ -78,13 +135,14 @@
                 <!-- User Control 2 (Right) -->
                 <div class="user-control right-control">
                     <div class="control-label">USER CONTROL 2</div>
-                    <div class="em-emitter" id="emitter2">
-                        <div class="emitter-body">
-                            <div class="emitter-beam" id="beam2"></div>
-                            <div class="emitter-tip"></div>
+                    <div class="em-emitter flipper-right" id="emitter2">
+                        <div class="emitter-body flipper-body">
+                            <div class="emitter-beam flipper-beam" id="beam2"></div>
+                            <div class="emitter-tip flipper-tip"></div>
                         </div>
                         <div class="angle-control">
-                            <input type="range" min="-45" max="45" value="0" class="angle-slider" id="angleSlider2">
+                            <span class="flipper-key">D KEY</span>
+                            <input type="range" min="-60" max="60" value="0" class="angle-slider" id="angleSlider2">
                             <div class="angle-display" id="angleDisplay2">0°</div>
                         </div>
                     </div>
