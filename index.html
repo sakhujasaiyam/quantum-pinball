@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Cloud - Quantum Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="level-indicator">LEVEL 1</div>
+            <div class="target-state">
+                <span>TARGET STATE: |1⟩</span>
+                <button class="check-button" id="checkButton">CHECK</button>
+            </div>
+        </div>
+        
+        <div class="game-area" id="gameArea">
+            <!-- Gate Cloud at top -->
+            <div class="gate-cloud" id="gateCloud">
+                <div class="cloud-title">GATE CLOUD</div>
+                <div class="cloud-visual">
+                    <div class="cloud-particle"></div>
+                    <div class="cloud-particle"></div>
+                    <div class="cloud-particle"></div>
+                    <div class="cloud-particle"></div>
+                    <div class="cloud-particle"></div>
+                </div>
+            </div>
+
+            <!-- Central Deflector -->
+            <div class="central-deflector" id="centralDeflector">
+                <div class="deflector-core">
+                    <div class="deflector-ring"></div>
+                    <div class="deflector-ring"></div>
+                    <div class="deflector-center">EM FIELD</div>
+                </div>
+            </div>
+
+            <!-- Game Status -->
+            <div class="game-status" id="gameStatus">Ready to start!</div>
+
+            <!-- Control Panel at bottom -->
+            <div class="control-panel">
+                <!-- User Control 1 (Left) -->
+                <div class="user-control left-control">
+                    <div class="control-label">USER CONTROL 1</div>
+                    <div class="em-emitter" id="emitter1">
+                        <div class="emitter-body">
+                            <div class="emitter-beam" id="beam1"></div>
+                            <div class="emitter-tip"></div>
+                        </div>
+                        <div class="angle-control">
+                            <input type="range" min="-45" max="45" value="0" class="angle-slider" id="angleSlider1">
+                            <div class="angle-display" id="angleDisplay1">0°</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qubits and Dustbin (Center) -->
+                <div class="center-area">
+                    <div class="qubit-container">
+                        <div class="qubit" id="qubit1">
+                            <div class="qubit-label">Q1</div>
+                            <div class="qubit-state" id="qubitState1">|0⟩</div>
+                            <div class="qubit-gates" id="qubitGates1"></div>
+                        </div>
+                    </div>
+                    <div class="dustbin" id="dustbin">
+                        <div class="dustbin-lid"></div>
+                        <div class="dustbin-body"></div>
+                        <div class="dustbin-label">DUSTBIN</div>
+                        <div class="dustbin-count" id="dustbinCount">0</div>
+                    </div>
+                </div>
+
+                <!-- User Control 2 (Right) -->
+                <div class="user-control right-control">
+                    <div class="control-label">USER CONTROL 2</div>
+                    <div class="em-emitter" id="emitter2">
+                        <div class="emitter-body">
+                            <div class="emitter-beam" id="beam2"></div>
+                            <div class="emitter-tip"></div>
+                        </div>
+                        <div class="angle-control">
+                            <input type="range" min="-45" max="45" value="0" class="angle-slider" id="angleSlider2">
+                            <div class="angle-display" id="angleDisplay2">0°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start/Pause Button -->
+            <div class="game-controls">
+                <button class="start-button" id="startButton">START GAME</button>
+                <button class="pause-button" id="pauseButton" disabled>PAUSE</button>
+                <button class="reset-button" id="resetButton">RESET</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
